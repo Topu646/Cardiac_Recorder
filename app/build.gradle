@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace 'com.example.cardiacrecorder'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.cardiacrecorder"
@@ -25,6 +25,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
     }
 }
 
