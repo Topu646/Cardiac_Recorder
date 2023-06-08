@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back01"
     tools:context=".Home">
 
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cardiac Recorder"
+        android:fontFamily="sans-serif-black"
+        android:text="Your Records"
+        android:gravity="center"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:textColor="@color/black"
-        android:fontFamily="sans-serif-black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
+        app:layout_constraintVertical_bias="0.054" />
 
     <ListView
         android:layout_width="363dp"
@@ -32,21 +33,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/insertbutton"
+        android:id="@+id/insertdataid"
         android:layout_width="match_parent"
-        android:layout_marginLeft="50dp"
+        android:layout_height="50dp"
+        android:text="Insert new Data"
         android:layout_marginRight="50dp"
-        android:layout_height="55dp"
-        android:text="Insert Data"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
+        android:textStyle="bold"
         android:textAllCaps="false"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:backgroundTint="@color/design_default_color_secondary_variant"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.906" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

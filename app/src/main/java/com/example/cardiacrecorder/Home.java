@@ -15,7 +15,7 @@ public class Home extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        insertdatabutton = findViewById(R.id.insertbutton);
+        insertdatabutton = findViewById(R.id.insertdataid);
 
         insertdatabutton.setOnClickListener(new View.OnClickListener() {
             @Override
