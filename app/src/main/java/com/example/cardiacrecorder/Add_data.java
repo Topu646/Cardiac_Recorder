@@ -7,16 +7,23 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Add_data extends AppCompatActivity {
 
     private Button uploadbutton;
     private EditText dom,tom,sysp,diasp,hr,cmt;
+
+    DatabaseReference databaseReference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_data);
 
+        databaseReference = FirebaseDatabase.getInstance().getReference("Added Record");
         uploadbutton = findViewById(R.id.uploadid);
 
         dom = findViewById(R.id.titleid);
@@ -31,6 +38,10 @@ public class Add_data extends AppCompatActivity {
         uploadbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+                String key = databaseReference.push().getKey();
+
                 String dateom,timeom,systolic,diastolic,heartrate,comment;
                 dateom = dom.getText().toString().trim();
                 timeom = tom.getText().toString().trim();
@@ -38,8 +49,14 @@ public class Add_data extends AppCompatActivity {
                 diastolic = diasp.getText().toString().trim();
                 heartrate = hr.getText().toString().trim();
                 comment = cmt.getText().toString().trim();
-                Intent intent = new Intent(Add_data.this,Home.class);
-                startActivity(intent);
+
+                Insert_Record insert_record = new Insert_Record(dateom,timeom,systolic,diastolic,heartrate,comment);
+
+                databaseReference.child(key).setValue(insert_record);
+
+                Toast.makeText(getApplicationContext(),"New record inserted successfully",Toast.LENGTH_SHORT).show();
+                //Intent intent = new Intent(Add_data.this,Home.class);
+               // startActivity(intent);
             }
         });
     }
