@@ -15,7 +15,7 @@ public class Add_data extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_dada);
+        setContentView(R.layout.activity_add_data);
 
         uploadbutton = findViewById(R.id.uploadid);
 
