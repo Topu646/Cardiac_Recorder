@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -52,7 +53,8 @@ public class Add_data extends AppCompatActivity {
 
                 Insert_Record insert_record = new Insert_Record(dateom,timeom,systolic,diastolic,heartrate,comment);
 
-                databaseReference.child(key).setValue(insert_record);
+                String uid = FirebaseAuth.getInstance().getUid();
+                databaseReference.child(uid).child(key).setValue(insert_record);
 
                 Toast.makeText(getApplicationContext(),"New record inserted successfully",Toast.LENGTH_SHORT).show();
                 //Intent intent = new Intent(Add_data.this,Home.class);

@@ -36,21 +36,22 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
+
         android:id="@+id/insertdataid"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Insert new Data"
-        android:layout_marginRight="50dp"
         android:layout_marginLeft="50dp"
-        android:layout_marginTop="40dp"
-        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="50dp"
+        android:text="Insert new Data"
         android:textAllCaps="false"
-
+        android:textStyle="bold"
+        android:shadowRadius="@integer/material_motion_duration_long_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.838"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.906" />
+        app:layout_constraintVertical_bias="0.974" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
