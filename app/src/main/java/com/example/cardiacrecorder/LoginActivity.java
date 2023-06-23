@@ -96,10 +96,10 @@ public class LoginActivity extends AppCompatActivity {
                     Exception e = task.getException();
                     if(e != null){
                         e.printStackTrace();
-                        Toast.makeText(LoginActivity.this,e.getMessage(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Incorrect email or password",Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    Toast.makeText(getApplicationContext(),"Login Unsuccessful",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(getApplicationContext(),"Login Unsuccessful",Toast.LENGTH_SHORT).show();
                 }
             }
         });

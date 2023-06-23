@@ -48,6 +48,8 @@ public class CustomAdapter extends ArrayAdapter<Insert_Record> {
         hrtextview.setText(insert_record.getHeartrate());
         commenttextview.setText(insert_record.getComment());
 
+
+
         return view;
 
     }

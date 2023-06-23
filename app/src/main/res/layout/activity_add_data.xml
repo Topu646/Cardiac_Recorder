@@ -195,16 +195,30 @@
 
 
 
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/uploadid"-->
+<!--                android:text="save"-->
+<!--                android:layout_below="@+id/cmtid"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                />-->
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/uploadid"
-                android:text="save"
                 android:layout_below="@+id/cmtid"
-                android:layout_marginStart="30dp"
-                android:layout_marginEnd="30dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="40dp"
+                android:text="save"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_button01"
                 android:textColor="@color/white"
+                android:id="@+id/uploadid"
+
                 />
 
         </RelativeLayout>

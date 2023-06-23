@@ -35,23 +35,56 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
 
-        android:id="@+id/insertdataid"
+    <TextView
+        android:id="@+id/emptytextid"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="50dp"
-        android:text="Insert new Data"
-        android:textAllCaps="false"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:textStyle="bold"
-        android:shadowRadius="@integer/material_motion_duration_long_1"
+        android:textSize="20dp"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.838"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+<!--    <Button-->
+
+<!--        android:id="@+id/insertdataid"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:layout_marginRight="50dp"-->
+<!--        android:text="Insert new Data"-->
+<!--        android:textAllCaps="false"-->
+<!--        android:textStyle="bold"-->
+<!--        android:shadowRadius="@integer/material_motion_duration_long_1"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.838"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.974" />-->
+
+
+    <Button
+        android:id="@+id/insertdataid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_button01"
+        android:text="Insert new data"
+        android:textAllCaps="false"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/listviewid"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
+        app:layout_constraintVertical_bias="0.942" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
