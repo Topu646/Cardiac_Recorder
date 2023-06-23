@@ -59,6 +59,16 @@ public class Add_data extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(),"New record inserted successfully",Toast.LENGTH_SHORT).show();
                 //Intent intent = new Intent(Add_data.this,Home.class);
                // startActivity(intent);
+
+                dom.setText("");
+                tom.setText("");
+                sysp.setText("");
+                diasp.setText("");
+                hr.setText("");
+                cmt.setText("");
+
+                Intent intent = new Intent(Add_data.this,Home.class);
+                startActivity(intent);
             }
         });
     }

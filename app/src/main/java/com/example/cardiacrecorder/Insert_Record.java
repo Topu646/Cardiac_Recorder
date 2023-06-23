@@ -4,6 +4,10 @@ public class Insert_Record {
 
     private String date_of_measurement,time_of_measurement,systolic_ressure,diastolic_pressure,heartrate,comment;
 
+    public Insert_Record()
+    {
+
+    }
     public Insert_Record(String date_of_measurement, String time_of_measurement, String systolic_ressure, String diastolic_pressure, String heartrate, String comment) {
         this.date_of_measurement = date_of_measurement;
         this.time_of_measurement = time_of_measurement;
