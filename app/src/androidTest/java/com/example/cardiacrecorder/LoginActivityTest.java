@@ -40,7 +40,7 @@ public class LoginActivityTest {
         Espresso.closeSoftKeyboard();
         Espresso.onIdle();
         onView(withId(R.id.loginbtn)).perform(click());
-        //onView(withId(R.id.homeactivityid)).check(matches(isDisplayed()));
+//        onView(withId(R.id.homeactivityid)).check(matches(isDisplayed()));
     }
 
     private ViewAction typetext(String s) {
