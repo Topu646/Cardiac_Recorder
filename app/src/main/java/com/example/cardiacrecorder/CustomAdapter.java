@@ -23,7 +23,10 @@ public class CustomAdapter extends ArrayAdapter<Insert_Record> {
         this.context = context;
         this.insert_records_list = insert_records_list;
     }
-
+    public int count()
+    {
+        return insert_records_list.size();
+    }
 
     @NonNull
     @Override
