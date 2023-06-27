@@ -10,6 +10,7 @@
     android:backgroundTintMode="multiply"
     android:backgroundTint="#3D4E50"
     android:gravity="center"
+    android:id="@+id/splashactivityid"
     >
 
     <TextView

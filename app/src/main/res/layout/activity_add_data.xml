@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/adddataactivityid"
     tools:context=".Add_data">
 
     <RelativeLayout
@@ -33,7 +34,7 @@
             android:fontFamily="sans-serif-condensed"
             android:textColor="@color/white"
             android:textSize="27sp"
-
+            android:id="@+id/adddataid"
             />
 
 

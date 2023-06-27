@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/back01"
     android:layout_height="match_parent"
+    android:id="@+id/registeractivityid"
     tools:context=".RegisterActivity">
 
     <RelativeLayout
@@ -38,6 +39,7 @@
             android:layout_below="@+id/iconId"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
+            android:id="@+id/registertextid"
             android:fontFamily="sans-serif-condensed"
             android:text="Create New Account"
             android:textColor="@color/white"

@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:background="@drawable/back01"
     android:layout_height="match_parent"
+    android:id="@+id/loginactivityid"
     tools:context=".LoginActivity">
 
     <RelativeLayout
@@ -29,6 +30,7 @@
             android:layout_below="@+id/iconId"
             android:layout_marginTop="10dp"
             android:text="Please Login"
+            android:id="@+id/logintextid"
             android:fontFamily="sans-serif-condensed"
             android:textColor="@color/white"
             android:textSize="27sp"

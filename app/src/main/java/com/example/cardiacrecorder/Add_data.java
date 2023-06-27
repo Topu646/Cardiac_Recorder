@@ -43,7 +43,7 @@ public class Add_data extends AppCompatActivity {
 
                 String key = databaseReference.push().getKey();
 
-                String dateom,timeom,systolic,diastolic,heartrate,comment;
+                String dateom, timeom, systolic, diastolic, heartrate, comment;
                 dateom = dom.getText().toString().trim();
                 timeom = tom.getText().toString().trim();
                 systolic = sysp.getText().toString().trim();
@@ -51,24 +51,30 @@ public class Add_data extends AppCompatActivity {
                 heartrate = hr.getText().toString().trim();
                 comment = cmt.getText().toString().trim();
 
-                Insert_Record insert_record = new Insert_Record(dateom,timeom,systolic,diastolic,heartrate,comment);
+                if (dateom.equals("") || timeom.equals("") || systolic.equals("") || diastolic.equals("") || heartrate.equals("") || comment.equals("")) {
+                    Toast.makeText(getApplicationContext(), "Provide information to all queries", Toast.LENGTH_SHORT).show();
+                } else {
+                    Insert_Record insert_record = new Insert_Record(dateom, timeom, systolic, diastolic, heartrate, comment);
 
-                String uid = FirebaseAuth.getInstance().getUid();
-                databaseReference.child(uid).child(key).setValue(insert_record);
+                    String uid = FirebaseAuth.getInstance().getUid();
+                    databaseReference.child(uid).child(key).setValue(insert_record);
 
-                Toast.makeText(getApplicationContext(),"New record inserted successfully",Toast.LENGTH_SHORT).show();
-                //Intent intent = new Intent(Add_data.this,Home.class);
-               // startActivity(intent);
+                    Toast.makeText(getApplicationContext(), "New record inserted successfully", Toast.LENGTH_SHORT).show();
 
-                dom.setText("");
-                tom.setText("");
-                sysp.setText("");
-                diasp.setText("");
-                hr.setText("");
-                cmt.setText("");
+                    //Intent intent = new Intent(Add_data.this,Home.class);
+                    // startActivity(intent);
 
-                Intent intent = new Intent(Add_data.this,Home.class);
-                startActivity(intent);
+                    dom.setText("");
+                    tom.setText("");
+                    sysp.setText("");
+                    diasp.setText("");
+                    hr.setText("");
+                    cmt.setText("");
+
+                    Intent intent = new Intent(Add_data.this, Home.class);
+                    startActivity(intent);
+
+                }
             }
         });
     }
