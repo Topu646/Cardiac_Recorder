@@ -103,6 +103,7 @@ public class Home extends AppCompatActivity {
                             //Toast.makeText(getApplicationContext(),diastolicpre,Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(Home.this,edit_delete.class);
+                            intent.putExtra("key",insert_recordList.get(position).getKey());
                             intent.putExtra("date",date);
                             intent.putExtra("time",time);
                             intent.putExtra("systolic",systolicpre);

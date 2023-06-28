@@ -54,7 +54,7 @@ public class Add_data extends AppCompatActivity {
                 if (dateom.equals("") || timeom.equals("") || systolic.equals("") || diastolic.equals("") || heartrate.equals("") || comment.equals("")) {
                     Toast.makeText(getApplicationContext(), "Provide information to all queries", Toast.LENGTH_SHORT).show();
                 } else {
-                    Insert_Record insert_record = new Insert_Record(dateom, timeom, systolic, diastolic, heartrate, comment);
+                    Insert_Record insert_record = new Insert_Record(key,dateom, timeom, systolic, diastolic, heartrate, comment);
 
                     String uid = FirebaseAuth.getInstance().getUid();
                     databaseReference.child(uid).child(key).setValue(insert_record);

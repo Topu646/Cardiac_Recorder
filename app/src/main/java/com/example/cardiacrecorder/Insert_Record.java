@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Insert_Record {
 
-    private String date_of_measurement,time_of_measurement,systolic_ressure,diastolic_pressure,heartrate,comment;
+    private String date_of_measurement,time_of_measurement,systolic_ressure,diastolic_pressure,heartrate,comment,key;
     private List<Insert_Record> insert_records_list = new ArrayList<>();
     public Insert_Record()
     {
@@ -18,6 +18,25 @@ public class Insert_Record {
         this.diastolic_pressure = diastolic_pressure;
         this.heartrate = heartrate;
         this.comment = comment;
+    }
+
+    public Insert_Record(String key, String dateom, String timeom, String systolic, String diastolic, String heartrate, String comment) {
+        this.key = key;
+        this.date_of_measurement = dateom;
+        this.time_of_measurement = timeom;
+        this.systolic_ressure = systolic;
+        this.diastolic_pressure = diastolic;
+        this.heartrate = heartrate;
+        this.comment = comment;
+
+    }
+
+    public String getKey() {
+        return key;
+    }
+
+    public void setKey(String key) {
+        this.key = key;
     }
 
     public String getDate_of_measurement() {
