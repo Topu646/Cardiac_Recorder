@@ -59,6 +59,10 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     String name, email, password;
+
+    /**
+     * checks if the data is valid
+     */
     private void validdata() {
         name = binding.namneid.getText().toString().trim();
         email = binding.emailid.getText().toString().trim();

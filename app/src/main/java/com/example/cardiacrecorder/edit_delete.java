@@ -1,5 +1,6 @@
 package com.example.cardiacrecorder;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -10,12 +11,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class edit_delete extends AppCompatActivity {
 
     private TextView dateview,timeview,systolicview,diastolicview,heartview,commentview;
     private Button edit,delete;
-    private String date,time,systolic_Pressure,diastolic_Pressure,heart_rate,comment;
+    DatabaseReference databaseReference;
+    private String key,date,time,systolic_Pressure,diastolic_Pressure,heart_rate,comment;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +44,7 @@ public class edit_delete extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         if(bundle != null)
         {
+             key = bundle.getString("key");
              date = bundle.getString("date");
              time = bundle.getString("time");
              systolic_Pressure = bundle.getString("systolic");
@@ -52,18 +62,48 @@ public class edit_delete extends AppCompatActivity {
 
 
         delete.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Deletes the data
+             * @param v
+             */
             @Override
             public void onClick(View v) {
+
+                databaseReference = FirebaseDatabase.getInstance().getReference("Added Record");
+                //String key = databaseReference.child(FirebaseAuth.getInstance().getUid()).getKey();
+                databaseReference.child(FirebaseAuth.getInstance().getUid())
+                        .child(key)
+                        .removeValue()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void unused) {
+
+                                Toast.makeText(edit_delete.this, "Deleted Successfully", Toast.LENGTH_SHORT).show();
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+
+                                Toast.makeText(edit_delete.this, "Try again", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+
                 Intent intent = new Intent(edit_delete.this,Home.class);
                 startActivity(intent);
             }
         });
 
         edit.setOnClickListener(new View.OnClickListener() {
+            /**
+             * updates the data
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(edit_delete.this,EditRecord.class);
 
+                intent.putExtra("key",key);
                 intent.putExtra("date",date);
                 intent.putExtra("time",time);
                 intent.putExtra("sys",systolic_Pressure);
