@@ -34,6 +34,36 @@ public class UnitTest {
     }
 
 
+    @Test
+    public void testdeleteUserData()
+    {
+        Insert_Record datalist = new Insert_Record("01/01/2023","10.25","80","120","72","no comment");
+        datalist.addUserData(datalist);
+        assertEquals(1,datalist.getData().size());
+
+        Insert_Record datalist2 = new Insert_Record("01/01/2023","10.25","80","120","72","no comment");
+        datalist.addUserData(datalist2);
+        assertEquals(2,datalist.count());
+
+        datalist.deleteUserData(datalist);
+        assertEquals(1,datalist.getData().size());
+        assertFalse(datalist.getData().contains(datalist));
+
+        datalist.deleteUserData(datalist2);
+        assertEquals(0,datalist.getData().size());
+        assertFalse(datalist.getData().contains(datalist2));
+
+    }
+
+    @Test
+    public void testdeleteUserDataException()
+    {
+        Insert_Record datalist = new Insert_Record("01/01/2023","10.25","80","120","72","no comment");
+        datalist.addUserData(datalist);
+
+        datalist.deleteUserData(datalist);
+        assertThrows(IllegalArgumentException.class,() -> datalist.deleteUserData(datalist));
+    }
 
     @Test
     public void testaddUserDataException()

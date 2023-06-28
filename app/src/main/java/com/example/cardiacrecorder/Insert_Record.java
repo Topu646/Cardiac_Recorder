@@ -105,4 +105,17 @@ public class Insert_Record {
         return datalist;
     }
 
+    public void deleteUserData(Insert_Record data)
+    {
+        List<Insert_Record> datalist = insert_records_list;
+        if(datalist.contains(data))
+        {
+            insert_records_list.remove(data);
+        }
+        else {
+            throw new IllegalArgumentException();
+        }
+    }
+
+
 }
