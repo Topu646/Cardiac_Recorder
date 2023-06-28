@@ -5,6 +5,7 @@ import org.junit.Test;
 
 public class UnitTest {
 
+
     @Test
     public void testAdd() {
         Insert_Record datalist = new Insert_Record("01/01/2023","10.25","80","120","72","no comment");

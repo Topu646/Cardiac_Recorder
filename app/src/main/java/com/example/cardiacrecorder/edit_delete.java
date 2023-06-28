@@ -62,6 +62,10 @@ public class edit_delete extends AppCompatActivity {
 
 
         delete.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Deletes the data
+             * @param v
+             */
             @Override
             public void onClick(View v) {
 
@@ -91,6 +95,10 @@ public class edit_delete extends AppCompatActivity {
         });
 
         edit.setOnClickListener(new View.OnClickListener() {
+            /**
+             * updates the data
+             * @param v
+             */
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(edit_delete.this,EditRecord.class);

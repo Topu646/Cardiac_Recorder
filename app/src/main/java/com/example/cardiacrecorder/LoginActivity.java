@@ -60,6 +60,9 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * checks if the data is valid
+     */
     private void validdata() {
         email = binding.emailid.getText().toString().trim();
         password = binding.passwordid.getText().toString().trim();
