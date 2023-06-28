@@ -100,7 +100,7 @@ public class Home extends AppCompatActivity {
                             String commemts = String.valueOf(insert_recordList.get(position).getComment());
 
 
-                            Toast.makeText(getApplicationContext(),diastolicpre,Toast.LENGTH_SHORT).show();
+                            //Toast.makeText(getApplicationContext(),diastolicpre,Toast.LENGTH_SHORT).show();
 
                             Intent intent = new Intent(Home.this,edit_delete.class);
                             intent.putExtra("date",date);
