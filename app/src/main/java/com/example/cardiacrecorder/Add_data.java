@@ -51,18 +51,18 @@ public class Add_data extends AppCompatActivity {
                 heartrate = hr.getText().toString().trim();
                 comment = cmt.getText().toString().trim();
 
+
+
                 if (dateom.equals("") || timeom.equals("") || systolic.equals("") || diastolic.equals("") || heartrate.equals("") || comment.equals("")) {
                     Toast.makeText(getApplicationContext(), "Provide information to all queries", Toast.LENGTH_SHORT).show();
                 } else {
+
                     Insert_Record insert_record = new Insert_Record(dateom, timeom, systolic, diastolic, heartrate, comment);
 
                     String uid = FirebaseAuth.getInstance().getUid();
                     databaseReference.child(uid).child(key).setValue(insert_record);
 
                     Toast.makeText(getApplicationContext(), "New record inserted successfully", Toast.LENGTH_SHORT).show();
-
-                    //Intent intent = new Intent(Add_data.this,Home.class);
-                    // startActivity(intent);
 
                     dom.setText("");
                     tom.setText("");
