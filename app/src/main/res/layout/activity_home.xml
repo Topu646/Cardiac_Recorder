@@ -28,6 +28,7 @@
     <ListView
         android:divider="#ff22"
         android:dividerHeight="2dp"
+        android:listSelector="@color/teal_700"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:id="@+id/listviewid"

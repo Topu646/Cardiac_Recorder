@@ -7,6 +7,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -86,7 +87,35 @@ public class Home extends AppCompatActivity {
 
                     }
                     listView.setAdapter(customAdapter);
+
+                    listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                            String date = String.valueOf(insert_recordList.get(position).getDate_of_measurement());
+                            String time  = String.valueOf(insert_recordList.get(position).getTime_of_measurement());
+                            String systolicpre  = String.valueOf(insert_recordList.get(position).getSystolic_ressure());
+                            String diastolicpre  = String.valueOf(insert_recordList.get(position).getDiastolic_pressure());
+                            String heartr  = String.valueOf(insert_recordList.get(position).getHeartrate());
+                            String commemts = String.valueOf(insert_recordList.get(position).getComment());
+
+
+                            Toast.makeText(getApplicationContext(),diastolicpre,Toast.LENGTH_SHORT).show();
+
+                            Intent intent = new Intent(Home.this,edit_delete.class);
+                            intent.putExtra("date",date);
+                            intent.putExtra("time",time);
+                            intent.putExtra("systolic",systolicpre);
+                            intent.putExtra("diastolic",diastolicpre);
+                            intent.putExtra("heartrate",heartr);
+                            intent.putExtra("comment",commemts);
+
+                            startActivity(intent);
+                        }
+                    });
                 }
+
+
 
 //                listView.setAdapter(customAdapter);
             }
