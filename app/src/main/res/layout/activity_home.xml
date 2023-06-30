@@ -25,6 +25,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.054" />
 
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+
+<!--        <ImageView-->
+<!--            android:id="@+id/imageid"-->
+<!--            android:layout_width="86dp"-->
+<!--            android:layout_height="90dp"-->
+<!--            android:maxWidth="10dp"-->
+<!--            android:maxHeight="10dp"-->
+<!--            android:src="@drawable/danger"-->
+<!--            android:visibility="gone"-->
+<!--            tools:ignore="MissingConstraints">-->
+<!--        </ImageView>-->
+
+
     <ListView
         android:divider="#ff22"
         android:dividerHeight="2dp"
@@ -36,6 +56,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+<!--    </LinearLayout>-->
 
 
     <TextView

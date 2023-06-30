@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,8 +27,10 @@ import java.util.List;
 public class Home extends AppCompatActivity {
 
     private TextView emptytext;
+    private int si,di;
     private Button insertdatabutton;
     private ListView listView;
+   // private ImageView imageView;
     DatabaseReference databaseReference;
     List<Insert_Record> insert_recordList;
     CustomAdapter customAdapter;
@@ -43,6 +46,8 @@ public class Home extends AppCompatActivity {
         emptytext = findViewById(R.id.emptytextid);
         listView = findViewById(R.id.listviewid);
         insertdatabutton = findViewById(R.id.insertdataid);
+
+      //  imageView = findViewById(R.id.imageid);
      //   String key = databaseReference.push().getKey();
         String uid = FirebaseAuth.getInstance().getUid();
         databaseReference = FirebaseDatabase.getInstance().getReference("Added Record").child(uid);
