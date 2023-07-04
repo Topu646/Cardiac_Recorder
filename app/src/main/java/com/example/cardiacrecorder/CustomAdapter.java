@@ -67,7 +67,7 @@ public class CustomAdapter extends ArrayAdapter<Insert_Record> {
         int di = Integer.parseInt(diasnum);
         int heartrate = Integer.parseInt(hrate);
 
-        if (si < 60 || di > 140 || heartrate < 60) {
+        if ((si<90 || si>140) || (di<60 || di>90)) {
            // view.setBackgroundResource(R.drawable.danger2);
             view.setBackgroundColor(ContextCompat.getColor(context, R.color.highlight_color));
         }
