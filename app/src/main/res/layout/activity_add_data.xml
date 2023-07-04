@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/adddataactivityid"
+    tools:context=".Add_data">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/toolbarid"
+        android:background="@drawable/shape_toolbar">
+
+
+
+        <ImageView
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:id="@+id/iconId"
+            android:src="@drawable/adddataimage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/iconId"
+            android:layout_marginTop="10dp"
+            android:text="Add new record"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="@color/white"
+            android:textSize="27sp"
+            android:id="@+id/adddataid"
+            />
+
+
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textid"
+                android:layout_marginTop="220dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:id="@+id/titleid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Date of Measurement"
+                    android:inputType="date"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/descriptionid"
+                android:layout_below="@+id/textid"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/descid"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Time of Measurement"
+                    android:inputType="time"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sysid"
+                android:layout_below="@+id/descriptionid"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/systolicpressureid"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Systolic Pressure"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/diosid"
+                android:layout_below="@+id/sysid"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/diastolicpressureid"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Disatolic Pressure"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/hrtrateid"
+                android:layout_below="@+id/diosid"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/heartrateid"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Heart Rate"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cmtid"
+                android:layout_below="@+id/hrtrateid"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/commentid"
+                    android:background="@drawable/shape_edittext"
+                    android:hint="  Comment"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+<!--            <Button-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:id="@+id/uploadid"-->
+<!--                android:text="save"-->
+<!--                android:layout_below="@+id/cmtid"-->
+<!--                android:layout_marginStart="30dp"-->
+<!--                android:layout_marginEnd="30dp"-->
+<!--                android:layout_marginTop="20dp"-->
+<!--                android:textColor="@color/white"-->
+<!--                />-->
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cmtid"
+                android:layout_marginTop="40dp"
+                android:text="save"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/shape_button01"
+                android:textColor="@color/white"
+                android:id="@+id/uploadid"
+
+                />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
+
