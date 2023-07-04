@@ -53,8 +53,18 @@ public class Add_data extends AppCompatActivity {
 
 
 
-                if (dateom.equals("") || timeom.equals("") || systolic.equals("") || diastolic.equals("") || heartrate.equals("") || comment.equals("")) {
-                    Toast.makeText(getApplicationContext(), "Provide information to all queries", Toast.LENGTH_SHORT).show();
+                String sysnum = systolic.replaceAll("[^0-9]", "");
+                String diasnum = diastolic.replaceAll("[^0-9]", "");
+                String hrate = heartrate.replaceAll("[^0-9]", "");
+
+                int si = Integer.parseInt(sysnum);
+                int di = Integer.parseInt(diasnum);
+                int heart = Integer.parseInt(hrate);
+
+
+
+                if (dateom.equals("") || timeom.equals("") || systolic.equals("") || diastolic.equals("") || heartrate.equals("") || si<0 || di<0 || heart<0) {
+                    Toast.makeText(getApplicationContext(), "Provide information to all queries or non negative values to systolic,diastolic and heart rate field", Toast.LENGTH_SHORT).show();
                 } else {
 
                     Insert_Record insert_record = new Insert_Record(key,dateom, timeom, systolic, diastolic, heartrate, comment);
