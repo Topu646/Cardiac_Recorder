@@ -26,3 +26,5 @@ The app allows the user to:
 More details can be found in [here](https://github.com/Topu646/Cardiac_Recorder/wiki)
 
 # Screenshots
+
+![screenshots](Cardiac_recorder_screenshots.jpeg)
