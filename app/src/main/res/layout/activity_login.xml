@@ -19,7 +19,7 @@
             android:layout_width="110dp"
             android:layout_height="110dp"
             android:id="@+id/iconId"
-            android:src="@drawable/icon"
+            android:src="@drawable/icon2"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
             />
