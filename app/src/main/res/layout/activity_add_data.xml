@@ -69,7 +69,6 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_edittext"
                     android:hint="  Date of Measurement"
-                    android:inputType="date"
                     android:textColor="@color/black"
                     android:textColorHint="@color/black"
                     android:textSize="16sp" />
@@ -92,7 +91,6 @@
                     android:id="@+id/descid"
                     android:background="@drawable/shape_edittext"
                     android:hint="  Time of Measurement"
-                    android:inputType="time"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     />
@@ -115,7 +113,6 @@
                     android:id="@+id/systolicpressureid"
                     android:background="@drawable/shape_edittext"
                     android:hint="  Systolic Pressure"
-                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     />
@@ -141,7 +138,6 @@
                     android:id="@+id/diastolicpressureid"
                     android:background="@drawable/shape_edittext"
                     android:hint="  Disatolic Pressure"
-                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     />
@@ -167,7 +163,6 @@
                     android:id="@+id/heartrateid"
                     android:background="@drawable/shape_edittext"
                     android:hint="  Heart Rate"
-                    android:inputType="number"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     />
