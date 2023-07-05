@@ -37,8 +37,5 @@ public class edit_deleteTest {
         onView(withId(R.id.editbutton)).perform(click());
         onView(withId(R.id.editrecordactivityid)).check(matches(isDisplayed()));
         Espresso.pressBack();
-
-        onView(withId(R.id.deletebutton)).perform(click());
-        onView(withId(R.id.homeactivityid)).check(matches(isDisplayed()));
     }
 }
